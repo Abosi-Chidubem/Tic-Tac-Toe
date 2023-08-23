@@ -50,13 +50,14 @@ function disableButtonsWhenGameIsWon(player) {
     }
 }
 
+// This is a function to check if the game ends as a draw
 function checkDraw(){
     for (let button of buttons) {
         if (button.textContent === ""){
             return;
         }
     }
-    display.textContent = "It is a Draw Game"
+    display.textContent = "It is a Draw Game 😜"
 }
 
 // TASK
