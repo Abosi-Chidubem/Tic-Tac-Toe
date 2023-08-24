@@ -46,7 +46,7 @@ function disableButtonsWhenGameIsWon(player) {
         if(button.textContent === ""){
             button.toggleAttribute("disabled")
         }
-        display.textContent= player + " won the game";
+        display.textContent= player + " won the game 🎉👍";
     }
 }
 
