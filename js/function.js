@@ -25,20 +25,47 @@ function checkIfGameIsWon(first, second, third) {
     }
 }
 
+function checkStatus (){
+    // Check if the game has been won horizontally
+    checkIfGameIsWon(0,1,2);
+    checkIfGameIsWon(3,4,5);
+    checkIfGameIsWon(6,7,8);
+    
+    // Check if game is won  vertically
+    checkIfGameIsWon(0,3,6);
+    checkIfGameIsWon(1,4,7);
+    checkIfGameIsWon(2,5,8);
+    
+    // Check if game is won diagonally
+    checkIfGameIsWon(0,4,8);
+    checkIfGameIsWon(2,4,6);
+}
+
 function disableButtonsWhenGameIsWon(player) {
     for(let button of buttons){
         if(button.textContent === ""){
             button.toggleAttribute("disabled")
         }
-        display.textContent= player + "won the game";
+        display.textContent= player + " won the game";
     }
 }
 
-function checkDraw() {
-    for(let button of buttons){
-        if(button.textContent === ""){
-            button.toggleAttribute("disabled")
+function checkDraw(){
+    for (let button of buttons) {
+        if (button.textContent === ""){
+            return;
         }
-        display.textContent= "It was a draw";
     }
+    display.textContent = "It is a Draw Game"
 }
+
+// TASK
+// function checkDraw() {
+//     for(let button of buttons){
+//         if(button.textContent === ""){
+//      WRONG       button.toggleAttribute("disabled")
+    // CORRECT      return
+//         }
+//         display.textContent= "It was a draw";
+//     }
+// }
