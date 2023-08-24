@@ -1,7 +1,7 @@
 // This function is to check when the game is won
 
 function checkIfGameIsWon(first, second, third) {
-    if (display.textContent.includes("won the game")){
+    if (display.textContent.includes("won the game 🎉👍")){
         return;
     }
 
